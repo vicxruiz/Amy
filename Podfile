@@ -8,5 +8,11 @@ target 'Amy' do
   # Pods for Amy
 
 pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'Firebase/Storage'
+pod 'LBTAComponents'
+pod 'JGProgressHUD'
+pod 'SwiftyJSON'
 
 end

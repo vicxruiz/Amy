@@ -7,3 +7,38 @@
 //
 
 import Foundation
+import UIKit
+
+class WelcomeController: UIViewController {
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.barTintColor = UIColor(r: 240, g: 128, b: 128)
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.groupTableViewBackground]
+        
+        loginButton.layer.masksToBounds = true
+        loginButton.layer.cornerRadius = Service.buttonCornerRadius
+        signUpButton.layer.masksToBounds = true
+        signUpButton.layer.cornerRadius = Service.buttonCornerRadius
+    }
+
+    
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "SignIn", sender: self)
+    }
+    
+    @IBAction func signUpButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "SignUp", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue?, sender: Any?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem
+        navigationItem.backBarButtonItem?.tintColor = UIColor.groupTableViewBackground
+    }
+}
+
