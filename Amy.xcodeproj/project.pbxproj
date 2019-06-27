@@ -8,15 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		0F267ACD7C315B3040EFA0CC /* Pods_Amy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B805646A3DDE5900F8724EAF /* Pods_Amy.framework */; };
+		5720DC7422C5192B0063A493 /* DataGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5720DC7322C5192B0063A493 /* DataGetter.swift */; };
 		57B7E94422C29D7500A743BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7E94322C29D7500A743BA /* AppDelegate.swift */; };
 		57B7E94922C29D7500A743BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B7E94722C29D7500A743BA /* Main.storyboard */; };
 		57B7E94B22C29D7E00A743BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57B7E94A22C29D7E00A743BA /* Assets.xcassets */; };
 		57B7E95E22C29EC600A743BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57B7E95D22C29EC600A743BA /* GoogleService-Info.plist */; };
 		57B7E96022C2A1BD00A743BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B7E95F22C2A1BD00A743BA /* LaunchScreen.storyboard */; };
+		57B7E96222C2A46700A743BA /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7E96122C2A46700A743BA /* CurrentUser.swift */; };
+		57B7E96422C2A4A300A743BA /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B7E96322C2A4A200A743BA /* Welcome.storyboard */; };
+		57B7E96722C2A95300A743BA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7E96622C2A95300A743BA /* WelcomeViewController.swift */; };
+		57B7E96922C2A96200A743BA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7E96822C2A96200A743BA /* LoginViewController.swift */; };
+		57B7E96B22C2A98200A743BA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7E96A22C2A98200A743BA /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		350CA37946AE1F3DEC5D035A /* Pods-Amy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Amy.release.xcconfig"; path = "Target Support Files/Pods-Amy/Pods-Amy.release.xcconfig"; sourceTree = "<group>"; };
+		5720DC7322C5192B0063A493 /* DataGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGetter.swift; sourceTree = "<group>"; };
 		57B7E94022C29D7500A743BA /* Amy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B7E94322C29D7500A743BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57B7E94822C29D7500A743BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -24,6 +31,11 @@
 		57B7E94F22C29D7E00A743BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57B7E95D22C29EC600A743BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		57B7E95F22C2A1BD00A743BA /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		57B7E96122C2A46700A743BA /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		57B7E96322C2A4A200A743BA /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		57B7E96622C2A95300A743BA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		57B7E96822C2A96200A743BA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		57B7E96A22C2A98200A743BA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B805646A3DDE5900F8724EAF /* Pods_Amy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Amy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1092516646215141616B355 /* Pods-Amy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Amy.debug.xcconfig"; path = "Target Support Files/Pods-Amy/Pods-Amy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +99,7 @@
 		57B7E95622C29DA000A743BA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				57B7E96122C2A46700A743BA /* CurrentUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -94,6 +107,7 @@
 		57B7E95722C29DA700A743BA /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				57B7E96522C2A94000A743BA /* Welcome */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -115,6 +129,7 @@
 		57B7E95A22C29DC100A743BA /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				5720DC7322C5192B0063A493 /* DataGetter.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -131,8 +146,19 @@
 			children = (
 				57B7E94722C29D7500A743BA /* Main.storyboard */,
 				57B7E95F22C2A1BD00A743BA /* LaunchScreen.storyboard */,
+				57B7E96322C2A4A200A743BA /* Welcome.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		57B7E96522C2A94000A743BA /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				57B7E96622C2A95300A743BA /* WelcomeViewController.swift */,
+				57B7E96822C2A96200A743BA /* LoginViewController.swift */,
+				57B7E96A22C2A98200A743BA /* SignUpViewController.swift */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		9571B782E4BB52A4C5907339 /* Frameworks */ = {
@@ -212,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57B7E96422C2A4A300A743BA /* Welcome.storyboard in Resources */,
 				57B7E94B22C29D7E00A743BA /* Assets.xcassets in Resources */,
 				57B7E96022C2A1BD00A743BA /* LaunchScreen.storyboard in Resources */,
 				57B7E94922C29D7500A743BA /* Main.storyboard in Resources */,
@@ -275,7 +302,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5720DC7422C5192B0063A493 /* DataGetter.swift in Sources */,
+				57B7E96922C2A96200A743BA /* LoginViewController.swift in Sources */,
+				57B7E96722C2A95300A743BA /* WelcomeViewController.swift in Sources */,
+				57B7E96222C2A46700A743BA /* CurrentUser.swift in Sources */,
 				57B7E94422C29D7500A743BA /* AppDelegate.swift in Sources */,
+				57B7E96B22C2A98200A743BA /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
