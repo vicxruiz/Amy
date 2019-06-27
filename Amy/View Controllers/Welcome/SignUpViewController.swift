@@ -19,7 +19,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var dismissButton: UIButton!
     
     
     let hud: JGProgressHUD = {
@@ -31,9 +30,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var signUpAccept: UIButton!
     
-    @IBAction func dismissButtonPressed(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
     
     @IBAction func signUpButtonPressed(_ sender: Any) {
         if self.usernameField.text == "" {
@@ -68,13 +64,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             
             self.saveUserIntoFirebase()
             self.hud.dismiss(animated: true)
-            
-            let alertController = UIAlertController(title: "Sign Up Successful", message: "Please add any pets that have been patients at St. Francis", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
-                self.performSegue(withIdentifier: "SIGNUP", sender: self)
-            })
-            alertController.addAction(action)
-            self.present(alertController, animated: true, completion: nil)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! MainTabBarController
+            self.present(vc, animated: false, completion: nil)
         }
     }
     
@@ -89,14 +81,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: testStr)
-    }
-    
-    @IBAction func privacyButtonPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "privacy", sender: self)
-    }
-    
-    @IBAction func tosButtonPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "termsofservice", sender: self)
     }
     
     func saveUserIntoFirebase() {
@@ -121,7 +105,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         navigationController?.navigationBar.prefersLargeTitles = true
         signUpAccept.layer.masksToBounds = true
-        signUpAccept.layer.cornerRadius = 15
+        signUpAccept.layer.cornerRadius = 7
         self.hideKeyboardWhenTappedAround()
         //        usernameField.addTarget(self, action: #selector(editingChanged(_:)), for: .editingChanged)
     }

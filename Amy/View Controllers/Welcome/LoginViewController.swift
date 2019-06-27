@@ -31,7 +31,7 @@ class SignInController: UIViewController {
     override func viewDidLoad() {
         navigationController?.navigationBar.prefersLargeTitles = true
         loginButton.layer.masksToBounds = true
-        loginButton.layer.cornerRadius = 15
+        loginButton.layer.cornerRadius = 7
         self.hideKeyboardWhenTappedAround()
     }
     
@@ -54,7 +54,9 @@ class SignInController: UIViewController {
                 return
             }
             self.hud.dismiss(animated: true)
-            self.performSegue(withIdentifier: "loginA", sender: self)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! MainTabBarController
+            self.present(vc, animated: false, completion: nil)
         }
     }
     
