@@ -9,7 +9,11 @@
 import Foundation
 import UIKit
 import JGProgressHUD
+
 class Service {
+    
+    static let apiID = "OQBFWPMW13YKZF2RMWA0HJPVSEFPLXVYE2CG5L45XXECQ20Z"
+    static let apiSecret = "ZFV3RCVJ0FIERNWFFCTOMSDUWRQ553LWF42JJFKHWWXEM2MO"
     static let baseColor = UIColor(r: 254, g: 202, b: 64)
     static let darkBaseColor = UIColor(r: 240, g: 128, b: 128)
     static let unselectedItemColor = UIColor(r:173, g: 173, b: 173)
